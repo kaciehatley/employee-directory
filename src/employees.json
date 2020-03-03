@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Mary Smith",
+    "image": "/images/1.jpg",
+    "occupation": "Accountant",
+    "contact": "mary.smith@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Anna Johnson",
+    "image": "/images/2.jpg",
+    "occupation": "Lawyer",
+    "contact": "anna.johnson@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Edward Jones",
+    "image": "/images/3.jpg",
+    "occupation": "Accountant",
+    "contact": "edward.jones@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Brian Miller",
+    "image": "/images/4.jpg",
+    "occupation": "Sales Rep",
+    "contact": "brian.miller@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Michael Wayne",
+    "image": "/images/5.jpg",
+    "occupation": "Human Resources",
+    "contact": "michael.wayne@example.com"
+  },
+  {
+    "id": 6,
+    "name": "Ella Harris",
+    "image": "/images/6.jpg",
+    "occupation": "Marketing",
+    "contact": "ella.harris@example.com"
+  },
+  {
+    "id": 7,
+    "name": "Brittany Jordan",
+    "image": "/images/7.jpg",
+    "occupation": "Accountant",
+    "contact": "brittany.jordan@example.com"
+  },
+  {
+    "id": 8,
+    "name": "Megan White",
+    "image": "/images/8.jpg",
+    "occupation": "Sales Rep",
+    "contact": "megan.white@example.com"
+  },
+  {
+    "id": 9,
+    "name": "Tommy Parker",
+    "image": "/images/9.jpg",
+    "occupation": "CEO",
+    "contact": "tommy.parker@example.com"
+  },
+  {
+    "id": 10,
+    "name": "Morgan Peterson",
+    "image": "/images/10.jpg",
+    "occupation": "CFO",
+    "contact": "morgan.peterson@example.com"
+  },
+  {
+    "id": 11,
+    "name": "Brad Thompson",
+    "image": "/images/11.jpg",
+    "occupation": "Lawyer",
+    "contact": "brad.thompson@example.com"
+  },
+  {
+    "id": 12,
+    "name": "Emma Williams",
+    "image": "/images/12.jpg",
+    "occupation": "Human Resources",
+    "contact": "emma.williams@example.com"
+  }
+]
