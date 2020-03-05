@@ -16,22 +16,23 @@ class App extends Component {
     console.log(event.target.value);
     this.setState({ search: event.target.value });
   };
-
-  // Work on search function working. Occupation isn't listed so you are JUST searching by name alone.
-
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  
   render() {
+
+    const filteredEmployees = this.state.employees.filter((employee) => { 
+      return employee.name.indexOf(this.state.search) !== -1;
+    })
+
     return (
       <Wrapper>
         <Title></Title>
         <Search
           handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
           search={this.state.search}
-        
         >
         </Search>
-        {this.state.employees.map(employee => (
+        {filteredEmployees.map(employee => (
           <EmployeeCard
             id={employee.id}
             key={employee.id}
