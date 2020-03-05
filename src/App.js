@@ -17,13 +17,8 @@ class App extends Component {
     this.setState({ search: event.target.value });
   };
 
+  // Work on search function working. Occupation isn't listed so you are JUST searching by name alone.
 
-  // removeEmployee = id => {
-  //   // Filter this.state.friends for friends with an id not equal to the id being removed
-  //   const employees = this.state.employees.filter(employee => employee.id !== id);
-  //   // Set this.state.friends equal to the new friends array
-  //   this.setState({ employees });
-  // };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -38,7 +33,6 @@ class App extends Component {
         </Search>
         {this.state.employees.map(employee => (
           <EmployeeCard
-            removeEmployee={this.removeEmployee}
             id={employee.id}
             key={employee.id}
             name={employee.name}
