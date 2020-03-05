@@ -9,16 +9,26 @@ class App extends Component {
 
   state = {
     search: "",
-    employees
+    employees,
+    order: "asc"
   };
 
   handleInputChange = event => {
     console.log(event.target.value);
     this.setState({ search: event.target.value });
   };
+
+  sortName = event => {
+    let currentEmployees = this.state.employees
+    .sort(function(a, b) {
+      if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+      if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+      return 0;
+    })
+    this.setState({ employees: currentEmployees });
+  }
   
   render() {
-
     const filteredEmployees = this.state.employees.filter((employee) => { 
       return employee.name.indexOf(this.state.search) !== -1;
     })
@@ -28,7 +38,7 @@ class App extends Component {
         <Title></Title>
         <Search
           handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
+          sortName={this.sortName}
           search={this.state.search}
         >
         </Search>
