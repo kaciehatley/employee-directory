@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     search: "",
     employees,
-    order: "asc"
+    aToZ: true
   };
 
   handleInputChange = event => {
@@ -18,14 +18,22 @@ class App extends Component {
     this.setState({ search: event.target.value });
   };
 
-  sortName = event => {
+  sortName = () => {
     let currentEmployees = this.state.employees
-    .sort(function(a, b) {
-      if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-      if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-      return 0;
-    })
-    this.setState({ employees: currentEmployees });
+    if (this.state.aToZ === true) {
+      currentEmployees.sort(function(a,b) {
+        if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        return 0;
+      })
+      this.setState({ employees: currentEmployees ,  aToZ: false });
+    }
+    else {
+      currentEmployees.sort(function(a,b) {
+        if(a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+        return 0;
+      })
+      this.setState({ employees: currentEmployees ,  aToZ: true });
+    }
   }
   
   render() {
